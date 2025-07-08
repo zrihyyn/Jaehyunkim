@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: "monotype-grotesque", sans-serif;
+}
+body ::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.top-border {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: darkgreen;
+  z-index: 2000;
+}
+
+.menu {
+  width: 30%;
+  position: fixed;
+  top: 1rem;
+  left: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  z-index: 1000;
+}
+.menu .menu-item {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.menu .menu-item:hover {
+  -webkit-text-decoration: underline 5px;
+          text-decoration: underline 5px;
+  text-underline-offset: 3pt;
+}
+.menu .menu-item[data-section=home] {
+  margin-bottom: 4rem;
+}
+.menu .menu-item[data-section=works] {
+  margin-bottom: 1rem;
+}
+
+.section {
+  display: none;
+  padding: 5rem 10rem 2rem 10rem;
+}
+.section.active {
+  display: block;
+}
+
+.project {
+  margin-bottom: 4rem;
+}
+.project .project-text {
+  margin-bottom: 1rem;
+}
+.project .carousel-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.project .carousel-container .carousel-track {
+  display: flex;
+  gap: 0.1rem;
+}
+.project .carousel-container .carousel-track img {
+  width: 300px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 0px;
+  cursor: e-resize;
+}
+
+a {
+  color: green;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    left: 0;
+    top: 0.5rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .menu .menu-item {
+    font-size: 1rem;
+  }
+  .section {
+    padding: 5rem 1.5rem 2rem 1.5rem;
+  }
+  .project .carousel-container .carousel-track img {
+    width: 80vw;
+  }
+}/*# sourceMappingURL=style.css.map */
